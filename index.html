@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recuperación Total - Recupera tu dinero de fraudes financieros</title>
+  <style>
+    :root {
+      --azul: #1E3A8A;
+      --naranja: #F97316;
+      --verde: #047857;
+      --gris-oscuro: #4B5563;
+      --fondo-claro: #F3F4F6;
+      --blanco: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background-color: var(--fondo-claro);
+      color: var(--gris-oscuro);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--azul);
+      color: var(--blanco);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 15px 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .cta-buttons a {
+      text-decoration: none;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      margin: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-naranja {
+      background-color: var(--naranja);
+    }
+
+    .btn-naranja:hover {
+      background-color: #ea580c;
+    }
+
+    .btn-blanco {
+      background-color: var(--blanco);
+      color: var(--azul);
+      border: 2px solid var(--azul);
+    }
+
+    .btn-blanco:hover {
+      background-color: #e0e7ff;
+    }
+
+    nav {
+      background-color: var(--azul);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--naranja);
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+      background: var(--blanco);
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--azul);
+      margin-bottom: 15px;
+    }
+
+    .servicio {
+      background: var(--fondo-claro);
+      border-left: 4px solid var(--verde);
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    .pasos {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-top: 20px;
+    }
+
+    .paso {
+      background: var(--fondo-claro);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 5px solid var(--azul);
+    }
+
+    .paso h3 {
+      margin-top: 0;
+      color: var(--azul);
+    }
+
+    .faq {
+      margin-bottom: 10px;
+    }
+
+    .faq button {
+      width: 100%;
+      background-color: var(--azul);
+      color: white;
+      border: none;
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .faq button:hover {
+      background-color: #2d4ecf;
+    }
+
+    .faq-content {
+      display: none;
+      padding: 15px;
+      background: #f9fafb;
+      border-left: 3px solid var(--naranja);
+      border-radius: 0 0 4px 4px;
+    }
+
+    .faq-content p {
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 30px auto;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+
+    button {
+      background-color: var(--azul);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #2d4ecf;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp:hover {
+      background-color: #1ebe5b;
+    }
+
+    footer {
+      background-color: var(--azul);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="escudo-dinero.jpg" alt="Protección financiera - escudo y dinero" />
+
+    <h1>¿Fuiste víctima de fraude?</h1>
+    <p>Te ayudamos a recuperar tu dinero. Somos especialistas en recuperación de fondos con un enfoque legal y efectivo. Tu tranquilidad es nuestra prioridad.</p>
+    <div class="cta-buttons">
+      <a href="#contacto" class="btn-naranja">Consulta gratuita</a>
+      <a href="#quienes-somos" class="btn-naranja">Conoce más</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#quienes-somos">Quiénes Somos</a>
+    <a href="#casos">Casos Comunes</a>
+    <a href="#metodo">Cómo Trabajamos</a>
+    <a href="#faq">Preguntas Frecuentes</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="quienes-somos">
+    <h2>¿Quiénes somos?</h2>
+    <p>En <strong>Recuperación Total</strong>, somos un equipo especializado en la recuperación de fondos para personas afectadas por fraudes financieros. Nuestra misión es clara: devolverte lo que es tuyo mediante un proceso legal, transparente y eficaz.</p>
+    <p>Contamos con asesores capacitados y experiencia comprobada. No solo nos enfocamos en recuperar tu dinero, sino en brindarte tranquilidad y seguridad durante todo el proceso.</p>
+
+    <h3>Nuestro compromiso</h3>
+    <ul>
+      <li>💼 <strong>Ética y transparencia:</strong> Te mantenemos informado en cada etapa.</li>
+      <li>🤝 <strong>Atención personalizada:</strong> Cada caso es único y lo tratamos con la dedicación que merece.</li>
+    </ul>
+
+    <h3>¿Por qué confiar en nosotros?</h3>
+    <ul>
+      <li>“No solo luchamos por tu dinero, luchamos por tu paz mental.”</li>
+      <li>Gracias a nuestro enfoque humano y profesional, somos recomendados por quienes ya recuperaron su tranquilidad.</li>
+    </ul>
+  </section>
+
+  <section id="casos">
+    <h2>Casos comunes que atendemos</h2>
+
+    <div class="servicio"><strong>1. Préstamos fraudulentos</strong> — Apps o plataformas que prometen préstamos inexistentes o manipulan comprobantes.</div>
+    <div class="servicio"><strong>2. Fraudes con AFORES</strong> — Movimientos no autorizados o promesas falsas de rendimientos.</div>
+    <div class="servicio"><strong>3. Compras por internet</strong> — Productos no entregados, cargos no reconocidos o phishing.</div>
+    <div class="servicio"><strong>4. Créditos hipotecarios fraudulentos</strong> — Cláusulas abusivas o documentación alterada.</div>
+    <div class="servicio"><strong>5. Fraudes con criptoactivos</strong> — Plataformas falsas o robos de wallets.</div>
+
+    <p>¿Tu caso no aparece aquí? No te preocupes. Cada situación es única y podemos ayudarte.</p>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="#contacto" class="btn-naranja">¿Te viste afectado? Podemos ayudarte</a>
+    </div>
+  </section>
+
+  <section id="metodo">
+    <h2>¿Cómo recuperamos tu dinero?</h2>
+    <div class="pasos">
+        <div class="paso">
+        <span class="paso-icono">🕵️‍♀️</span>
+        <h3>Evaluación inicial sin costo</h3>
+        <p>Analizamos tu caso y te explicamos las opciones legales disponibles.</p>
+      </div>
+      <div class="paso">
+        <span class="paso-icono">📄</span>
+        <h3>Formalización del acuerdo</h3>
+        <p>Solo pagas si recuperamos. Firmamos un contrato transparente.</p>
+      </div>
+      <div class="paso">
+        <span class="paso-icono">🔍</span>
+        <h3>Investigación y estrategia</h3>
+        <p>Rastreamos fondos y aplicamos acciones legales o mediación.</p>
+      </div>
+      <div class="paso">
+        <span class="paso-icono">💰</span>
+        <h3>Recuperación y seguimiento</h3>
+        <p>Te mantenemos informado hasta que los fondos estén de vuelta contigo.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:30px;">¿Por qué nuestro método es efectivo?</h3>
+    <ul>
+      <li>✅ <strong>Enfoque legal:</strong> No usamos tácticas dudosas. Todo está dentro del marco de la ley.</li>
+      <li>✅ <strong>Solo pagas si hay éxito:</strong> Nuestros honorarios están ligados al resultado.</li>
+    </ul>
+
+    <h3 style="margin-top:30px;">¿Listo para comenzar?</h3>
+    <p><em>"No importa cuán complejo parezca tu caso: tenemos la experiencia para resolverlo."</em></p>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a href="#contacto" class="btn-naranja">¡Evaluar mi caso gratis!</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq">
+      <button>¿Realmente pueden recuperar mi dinero?</button>
+      <div class="faq-content"><p>Sí. Contamos con un equipo legal y financiero especializado. Evaluamos tu caso sin costo para determinar su viabilidad.</p></div>
+    </div>
+
+    <div class="faq">
+      <button>¿Cómo sé si mi caso aplica para recuperación?</button>
+      <div class="faq-content"><p>Si fuiste víctima de fraude financiero, probablemente sí. Contáctanos y evaluamos tu caso gratis.</p></div>
+    </div>
+
+    <div class="faq">
+      <button>¿Qué necesito para iniciar?</button>
+      <div class="faq-content"><p>Documentos, comprobantes y detalles del fraude. Nosotros te ayudamos a organizar todo.</p></div>
+    </div>
+
+    <div class="faq">
+      <button>¿Cuáles son sus honorarios?</button>
+      <div class="faq-content"><p>Trabajamos bajo el esquema <strong>“solo pagas si recuperamos”</strong>. Sin costos ocultos.</p></div>
+    </div>
+
+    <div class="faq">
+      <button>¿Es seguro compartir mi información?</button>
+      <div class="faq-content"><p>Absolutamente. Tus datos están protegidos por protocolos de confidencialidad.</p></div>
+    </div>
+  </section>
+  <!-- NUEVA SECCIÓN DE TESTIMONIOS -->
+  <section id="testimonios" class="testimonios">
+    <h2>Testimonios</h2>
+    <h3>"No solo recuperamos dinero, devolvemos paz mental."</h3>
+
+    <div class="testimonios-grid">
+      <div class="testimonio">
+        <p>✅ <strong>Ana G.</strong> — Recuperó $45,000 MXN tras estafa de préstamo fraudulento.</p>
+        <p>"Creí que había perdido todo mi ahorro. El equipo de Recuperación Total fue profesional y me guió paso a paso. En 3 semanas tenía mi dinero de vuelta. ¡Gracias!"</p>
+      </div>
+
+      <div class="testimonio">
+        <p>✅ <strong>Carlos R.</strong> — Recuperó $120,000 MXN por fraude con AFORE.</p>
+        <p>"Desconfiaba de todo después de la estafa, pero Recuperación Total me demostró que aún hay instituciones serias. Transparentes, eficientes y humanos."</p>
+      </div>
+
+      <div class="testimonio">
+        <p>✅ <strong>María L.</strong> — Recuperó $28,000 MXN por compra fraudulenta en línea.</p>
+        <p>"Me sentí vulnerable y engañada. Recuperación Total luchó por mí cuando yo ya no podía. ¡No duden en contactarlos!"</p>
+      </div>
+
+      <div class="testimonio">
+        <p>✅ <strong>Javier M.</strong> — Recuperó $80,000 USD en estafa de criptomonedas.</p>
+        <p>"Pensé que era imposible recuperar dinero en cripto. Recuperación Total usó estrategias legales innovadoras y lo logró. ¡Increíble!"</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;">¿Por qué nos eligen?</h3>
+    <ul style="text-align:left; max-width:700px; margin:20px auto;">
+      <li>🔹 <strong>Resultados reales:</strong> +$500,000,000 MXN recuperados en los últimos 2 años.</li>
+      <li>🔹 <strong>Confianza:</strong> 9 de cada 10 clientes nos recomiendan.</li>
+      <li>🔹 <strong>Experiencia:</strong> +10,200 casos resueltos con éxito.</li>
+    </ul>
+  </section>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes comunicarte con nosotros a través del formulario o directamente por WhatsApp. Un asesor te responderá en pocos minutos.</p>
+
+<!-- FORMULARIO DE CONTACTO -->
+<form id="contact-form" action="https://formspree.io/f/xqagbjdj" method="POST">
+  <input type="text" name="nombre" placeholder="Nombre completo" required />
+  <input type="email" name="email" placeholder="Correo electrónico" required />
+  <textarea name="mensaje" rows="5" placeholder="Cuéntanos brevemente tu caso" required></textarea>
+  <button type="submit">Enviar mensaje</button>
+
+  <!-- Aquí aparecerá el mensaje de éxito o error -->
+  <p id="form-status" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+    ✅ Correo enviado con éxito.
+  </p>
+</form>
+   <!-- WHATSAPP -->
+  <div style="text-align:center; margin-top:25px;">
+   <a href="https://wa.me/5625205873?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20los%20servicios%20de%20Recuperación%20Total"
+       target="_blank" class="whatsapp">
+       💬 Contactar a Recuperación Total por WhatsApp
+    </a>
+  </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Recuperación Total — Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // Acordeones para FAQ
+    document.querySelectorAll('.faq button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // evita redirección
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        status.style.display = 'block';
+        status.style.color = 'green';
+        status.textContent = '✅ Correo enviado con éxito.';
+        form.reset();
+      } else {
+        throw new Error('Error al enviar');
+      }
+    } catch (error) {
+      status.style.display = 'block';
+      status.style.color = 'red';
+      status.textContent = '❌ Error al enviar. Intenta nuevamente.';
+    }
+  });
+</script>
+</body>
+</html>
+
