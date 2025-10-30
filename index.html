@@ -5,443 +5,549 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recuperación Total - Recupera tu dinero de fraudes financieros</title>
   <style>
-    :root {
-      --azul: #1E3A8A;
-      --naranja: #F97316;
-      --verde: #047857;
-      --gris-oscuro: #4B5563;
-      --fondo-claro: #F3F4F6;
-      --blanco: #FFFFFF;
-    }
+   :root {
+    --azul: #1E3A8A;
+    --naranja: #F97316;
+    --verde: #047857;
+    --gris-oscuro: #4B5563;
+    --fondo-claro: #F3F4F6;
+    --blanco: #FFFFFF;
+    --gris-claro: #E5E7EB;
+    --gris-super-claro: #FAFAFA;
+    --dorado-claro: #F5DEB3;
+  }
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      background-color: var(--fondo-claro);
-      color: var(--gris-oscuro);
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+}
 
-    header {
-      background-color: var(--azul);
-      color: var(--blanco);
-      padding: 60px 20px;
-      text-align: center;
-    }
+a {
+  text-decoration: none;
+}
 
-    header h1 {
-      margin: 0 0 15px 0;
-      font-size: 2.5em;
-    }
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--azul), #3b82f6);
+  color: var(--blanco);
+  -----text-align: center;
+  padding: 80px 20px;
+}
 
-    header p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin: 0 auto 25px;
-    }
+header img {
+  max-width: 300px; /* más grande */
+  margin-bottom: 20px;
+}
 
-    .cta-buttons a {
-      text-decoration: none;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      margin: 5px;
-      font-weight: bold;
-      display: inline-block;
-    }
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
 
-    .btn-naranja {
-      background-color: var(--naranja);
-    }
+header p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: auto 0 25px;
+}
 
-    .btn-naranja:hover {
-      background-color: #ea580c;
-    }
+.cta-buttons a {
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s;
+}
 
-    .btn-blanco {
-      background-color: var(--blanco);
-      color: var(--azul);
-      border: 2px solid var(--azul);
-    }
+.btn-naranja {
+  background-color: var(--naranja);
+  color: white;
+}
 
-    .btn-blanco:hover {
-      background-color: #e0e7ff;
-    }
+.btn-naranja:hover {
+  background-color: #ea580c;
+}
 
-    nav {
-      background-color: var(--azul);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+.btn-blanco {
+  background-color: var(--blanco);
+  color: var(--azul);
+  border: 2px solid var(--azul);
+}
 
-    nav a {
-      color: var(--blanco);
-      text-decoration: none;
-      padding: 14px 20px;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
+.btn-blanco:hover {
+  background-color: #e0e7ff;
+}
 
-    nav a:hover {
-      background-color: var(--naranja);
-    }
+/* Navegación */
+nav {
+  background-color: var(--azul);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-    section {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-      background: var(--blanco);
-      margin-top: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+nav a {
+  color: var(--blanco);
+  padding: 14px 20px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
 
-    h2 {
-      color: var(--azul);
-      margin-bottom: 15px;
-    }
+nav a:hover {
+  background-color: var(--naranja);
+}
 
-    .servicio {
-      background: var(--fondo-claro);
-      border-left: 4px solid var(--verde);
-      padding: 15px;
-      border-radius: 4px;
-      margin-bottom: 15px;
-    }
+/* Secciones */
+section {
+  padding: 60px 20px;
+  width: 100%;
+}
 
-    .pasos {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      margin-top: 20px;
-    }
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .paso {
-      background: var(--fondo-claro);
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 5px solid var(--azul);
-    }
+h2 {
+  color: var(--azul);
+  margin-bottom: 25px;
+  text-align: center;
+}
 
-    .paso h3 {
-      margin-top: 0;
-      color: var(--azul);
-    }
+/* Quiénes somos */
+#quienes-somos {
+  background-color: var(--fondo-claro);
+}
 
-    .faq {
-      margin-bottom: 10px;
-    }
+#quienes-somos p, #quienes-somos ul {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 15px;
+  text-align: center; /* centrado */
+}
 
-    .faq button {
-      width: 100%;
-      background-color: var(--azul);
-      color: white;
-      border: none;
-      padding: 15px;
-      text-align: left;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 4px;
-    }
+/* Casos comunes */
+#casos {
+  background-color: var(--gris-super-claro);
+}
 
-    .faq button:hover {
-      background-color: #2d4ecf;
-    }
+.servicio {
+  background: var(--blanco);
+  border-left: 4px solid var(--verde);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-    .faq-content {
-      display: none;
-      padding: 15px;
-      background: #f9fafb;
-      border-left: 3px solid var(--naranja);
-      border-radius: 0 0 4px 4px;
-    }
+/* Método */
+#metodo {
+  background-color: var(--blanco);
+}
 
-    .faq-content p {
-      margin: 0;
-    }
+.pasos {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 25px;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 500px;
-      margin: 30px auto;
-    }
+.paso {
+  background-color: var(--fondo-claro);
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 5px solid var(--azul);
+  transition: transform 0.3s;
+  text-align: center; /* centrado */
+}
 
-    input, textarea {
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: inherit;
-    }
+.paso:hover {
+  transform: translateY(-5px);
+}
 
-    button {
-      background-color: var(--azul);
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.paso h3 {
+  margin-top: 0;
+  color: var(--azul);
+}
 
-    button:hover {
-      background-color: #2d4ecf;
-    }
+/* Agrandamos íconos */
+.paso span.paso-icono {
+  font-size: 2.5em;
+  display: block;
+  margin-bottom: 10px;
+}
 
-    .whatsapp {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 15px;
-      transition: background-color 0.3s;
-    }
+/* FAQ */
+#faq {
+  background-color: var(--gris-claro);
+}
 
-    .whatsapp:hover {
-      background-color: #1ebe5b;
-    }
+.faq {
+  max-width: 800px;
+  margin: 20px auto;
+}
 
-    footer {
-      background-color: var(--azul);
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-    }
+.faq button {
+  width: 100%;
+  background-color: var(--azul);
+  color: white;
+  border: none;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.faq button:hover {
+  background-color: #2d4ecf;
+}
+
+.faq-content {
+  display: none;
+  padding: 15px;
+  background: var(--blanco);
+  border-left: 4px solid var(--naranja);
+  border-radius: 0 0 6px 6px;
+  margin-bottom: 10px;
+}
+
+/* Testimonios */
+#testimonios {
+  background-color: var(--dorado-claro);
+  text-align: center; /* centrado */
+}
+
+.testimonios-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 30px;
+}
+
+.testimonio {
+  background: var(--blanco);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center; /* centrado */
+}
+
+/* Contacto */
+#contacto {
+  background-color: var(--gris-super-claro);
+  text-align: center; /* centrado */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+button {
+  background-color: var(--azul);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2d4ecf;
+}
+
+.whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp:hover {
+  background-color: #1ebe5b;
+}
+
+/* Footer */
+footer {
+  background-color: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+/* Responsivo */
+@media(max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .pasos {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
-</head>
+<header style="text-align: center; padding: 50px 20px; background: linear-gradient(to right, #0052cc, #3399ff); color: white;">
+  <img src="escudo-dinero.jpg" 
+       alt="Protección financiera - escudo y dinero" 
+       style="max-width: 250px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);" />
 
-<body>
-  <header>
-    <img src="escudo-dinero.jpg" alt="Protección financiera - escudo y dinero" />
-
-    <h1>¿Fuiste víctima de fraude?</h1>
-    <p>Te ayudamos a recuperar tu dinero. Somos especialistas en recuperación de fondos con un enfoque legal y efectivo. Tu tranquilidad es nuestra prioridad.</p>
-    <div class="cta-buttons">
-      <a href="#contacto" class="btn-naranja">Consulta gratuita</a>
-      <a href="#quienes-somos" class="btn-naranja">Conoce más</a>
-    </div>
-  </header>
-
-  <nav>
-    <a href="#quienes-somos">Quiénes Somos</a>
-    <a href="#casos">Casos Comunes</a>
-    <a href="#metodo">Cómo Trabajamos</a>
-    <a href="#faq">Preguntas Frecuentes</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="quienes-somos">
-    <h2>¿Quiénes somos?</h2>
-    <p>En <strong>Recuperación Total</strong>, somos un equipo especializado en la recuperación de fondos para personas afectadas por fraudes financieros. Nuestra misión es clara: devolverte lo que es tuyo mediante un proceso legal, transparente y eficaz.</p>
-    <p>Contamos con asesores capacitados y experiencia comprobada. No solo nos enfocamos en recuperar tu dinero, sino en brindarte tranquilidad y seguridad durante todo el proceso.</p>
-
-    <h3>Nuestro compromiso</h3>
-    <ul>
-      <li>💼 <strong>Ética y transparencia:</strong> Te mantenemos informado en cada etapa.</li>
-      <li>🤝 <strong>Atención personalizada:</strong> Cada caso es único y lo tratamos con la dedicación que merece.</li>
-    </ul>
-
-    <h3>¿Por qué confiar en nosotros?</h3>
-    <ul>
-      <li>“No solo luchamos por tu dinero, luchamos por tu paz mental.”</li>
-      <li>Gracias a nuestro enfoque humano y profesional, somos recomendados por quienes ya recuperaron su tranquilidad.</li>
-    </ul>
+  <section class="hero">
+    <h1 style="font-size: 3em; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); margin-bottom: 20px;">
+      ¿Fuiste víctima de fraude?
+    </h1>
+    <p style="font-size: 1.5em; font-weight: 500; max-width: 800px; margin: 0 auto; line-height: 1.5; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+      Te ayudamos a recuperar tu dinero, somos especialistas en recuperación de fondos con un enfoque legal y efectivo.
+    </p>
   </section>
 
-  <section id="casos">
-    <h2>Casos comunes que atendemos</h2>
+  <div class="cta-buttons" style="margin-top: 30px;">
+    <a href="#contacto" class="btn-naranja" style="margin-right: 15px; font-size: 1.2em; padding: 12px 25px;">Consulta gratuita</a>
+    <a href="#quienes-somos" class="btn-naranja" style="font-size: 1.2em; padding: 12px 25px;">Conoce más</a>
+  </div>
+</header>
 
-    <div class="servicio"><strong>1. Préstamos fraudulentos</strong> — Apps o plataformas que prometen préstamos inexistentes o manipulan comprobantes.</div>
-    <div class="servicio"><strong>2. Fraudes con AFORES</strong> — Movimientos no autorizados o promesas falsas de rendimientos.</div>
-    <div class="servicio"><strong>3. Compras por internet</strong> — Productos no entregados, cargos no reconocidos o phishing.</div>
-    <div class="servicio"><strong>4. Créditos hipotecarios fraudulentos</strong> — Cláusulas abusivas o documentación alterada.</div>
-    <div class="servicio"><strong>5. Fraudes con criptoactivos</strong> — Plataformas falsas o robos de wallets.</div>
 
-    <p>¿Tu caso no aparece aquí? No te preocupes. Cada situación es única y podemos ayudarte.</p>
-    <div style="text-align:center; margin-top:20px;">
-      <a href="#contacto" class="btn-naranja">¿Te viste afectado? Podemos ayudarte</a>
+<nav style="font-size: 1.2em; 
+           font-weight: 600; 
+           text-align: center; 
+           margin: 20px 0;">
+  <a href="#quienes-somos" style="margin: 0 15px; text-decoration: none; color: #ffffff;">Quiénes Somos</a>
+  <a href="#casos" style="margin: 0 15px; text-decoration: none; color: #ffffff;">Casos Comunes</a>
+  <a href="#metodo" style="margin: 0 15px; text-decoration: none; color: #ffffff;">Cómo Trabajamos</a>
+  <a href="#faq" style="margin: 0 15px; text-decoration: none; color: #ffffff;">Preguntas Frecuentes</a>
+  <a href="#contacto" style="margin: 0 15px; text-decoration: none; color: #ffffff;">Contacto</a>
+</nav>
+
+<section id="quienes-somos" style="background: #f0f4f8; padding: 60px 20px; text-align: center; border-radius: 15px; max-width: 900px; margin: 40px auto; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+  <h2 style="color: #1a4d8f; font-size: 2em; margin-bottom: 20px;">Quiénes Somos</h2>
+  
+  <p style="font-size: 1.05em; line-height: 1.6; color: #333; margin-bottom: 40px;">
+    Somos un equipo especializado en recuperación de fondos y protección financiera. Combinamos experiencia legal y financiera para garantizar que recuperes lo que es tuyo, con transparencia y eficiencia.
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
+    <div style="background: #fff; padding: 20px 25px; border-radius: 12px; flex: 1 1 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+      <h3 style="color: #1a4d8f; margin-bottom: 10px;">💼 Ética y Transparencia</h3>
+      <p>Mantenemos informados a nuestros clientes en cada paso del proceso, con total honestidad.</p>
     </div>
+
+    <div style="background: #fff; padding: 20px 25px; border-radius: 12px; flex: 1 1 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+      <h3 style="color: #1a4d8f; margin-bottom: 10px;">🤝 Atención Personalizada</h3>
+      <p>Cada caso es único y lo tratamos con la dedicación y cuidado que merece.</p>
+    </div>
+
+    <div style="background: #fff; padding: 20px 25px; border-radius: 12px; flex: 1 1 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+      <h3 style="color: #1a4d8f; margin-bottom: 10px;">⚖️ Estrategias Legales</h3>
+      <p>Aplicamos procedimientos legales eficientes para maximizar la recuperación de tus fondos.</p>
+    </div>
+
+    <div style="background: #fff; padding: 20px 25px; border-radius: 12px; flex: 1 1 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s;">
+      <h3 style="color: #1a4d8f; margin-bottom: 10px;">💰 Resultados Comprobables</h3>
+      <p>Nuestro historial de casos exitosos respalda nuestra experiencia y compromiso.</p>
+    </div>
+  </div>
+</section>
+
   </section>
+   <section id="casos">
+   <section class="casos-comunes" style="background: #eaf2fa; padding: 50px 20px;">
+  <h2 style="text-align: center; font-size: 2.2em; color: #1a4d8f; margin-bottom: 40px;">Casos Comunes de Fraude</h2>
+
+  <div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto;">
+
+    <div style="background: linear-gradient(145deg, #d7e4f5, #a8c7ef); padding: 20px 25px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <h3 style="margin-bottom: 6px; color: #1a4d8f;">1. Préstamos fraudulentos</h3>
+      <p>Apps o plataformas que prometen préstamos inexistentes o manipulan comprobantes.</p>
+    </div>
+
+    <div style="background: linear-gradient(145deg, #d7e4f5, #a8c7ef); padding: 20px 25px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <h3 style="margin-bottom: 6px; color: #1a4d8f;">2. Fraudes con AFORES</h3>
+      <p>Movimientos no autorizados o promesas falsas de rendimientos.</p>
+    </div>
+
+    <div style="background: linear-gradient(145deg, #d7e4f5, #a8c7ef); padding: 20px 25px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <h3 style="margin-bottom: 6px; color: #1a4d8f;">3. Compras por internet</h3>
+      <p>Productos no entregados, cargos no reconocidos o phishing.</p>
+    </div>
+
+    <div style="background: linear-gradient(145deg, #d7e4f5, #a8c7ef); padding: 20px 25px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <h3 style="margin-bottom: 6px; color: #1a4d8f;">4. Créditos hipotecarios fraudulentos</h3>
+      <p>Cláusulas abusivas o documentación alterada.</p>
+    </div>
+
+    <div style="background: linear-gradient(145deg, #d7e4f5, #a8c7ef); padding: 20px 25px; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <h3 style="margin-bottom: 6px; color: #1a4d8f;">5. Fraudes con criptoactivos</h3>
+      <p>Plataformas falsas o robos de wallets.</p>
+    </div>
+
+  </div>
+</section>
 
   <section id="metodo">
-    <h2>¿Cómo recuperamos tu dinero?</h2>
-    <div class="pasos">
-        <div class="paso">
-        <span class="paso-icono">🕵️‍♀️</span>
-        <h3>Evaluación inicial sin costo</h3>
-        <p>Analizamos tu caso y te explicamos las opciones legales disponibles.</p>
-      </div>
-      <div class="paso">
-        <span class="paso-icono">📄</span>
-        <h3>Formalización del acuerdo</h3>
-        <p>Solo pagas si recuperamos. Firmamos un contrato transparente.</p>
-      </div>
-      <div class="paso">
-        <span class="paso-icono">🔍</span>
-        <h3>Investigación y estrategia</h3>
-        <p>Rastreamos fondos y aplicamos acciones legales o mediación.</p>
-      </div>
-      <div class="paso">
-        <span class="paso-icono">💰</span>
-        <h3>Recuperación y seguimiento</h3>
-        <p>Te mantenemos informado hasta que los fondos estén de vuelta contigo.</p>
-      </div>
+<section class="proceso" style="text-align: center; padding: 50px 20px; background-color: #f9f4ef;">
+  <h2 style="margin-bottom: 40px; font-size: 2.2em; color: #8b5e3c; font-weight: bold;">Nuestro Proceso</h2>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
+    
+    <div style="background: linear-gradient(145deg, #fbe8d3, #ffd79a); padding: 25px; border-radius: 15px; width: 230px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;" 
+         onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <div style="font-size: 2.0em; margin-bottom: 12px;">📝</div>
+      <h3 style="margin-bottom: 10px; color: #c97f3e;">1. Contacto inicial</h3>
+      <p>Analizamos tu caso y determinamos la viabilidad de recuperación.</p>
     </div>
 
-    <h3 style="margin-top:30px;">¿Por qué nuestro método es efectivo?</h3>
-    <ul>
-      <li>✅ <strong>Enfoque legal:</strong> No usamos tácticas dudosas. Todo está dentro del marco de la ley.</li>
-      <li>✅ <strong>Solo pagas si hay éxito:</strong> Nuestros honorarios están ligados al resultado.</li>
-    </ul>
-
-    <h3 style="margin-top:30px;">¿Listo para comenzar?</h3>
-    <p><em>"No importa cuán complejo parezca tu caso: tenemos la experiencia para resolverlo."</em></p>
-
-    <div style="text-align:center; margin-top:20px;">
-      <a href="#contacto" class="btn-naranja">¡Evaluar mi caso gratis!</a>
-    </div>
-  </section>
-
-  <section id="faq">
-    <h2>Preguntas frecuentes</h2>
-
-    <div class="faq">
-      <button>¿Realmente pueden recuperar mi dinero?</button>
-      <div class="faq-content"><p>Sí. Contamos con un equipo legal y financiero especializado. Evaluamos tu caso sin costo para determinar su viabilidad.</p></div>
+    <div style="background: linear-gradient(145deg, #fbe8d3, #ffd79a); padding: 25px; border-radius: 15px; width: 230px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <div style="font-size: 2.0em; margin-bottom: 12px;">📄</div>
+      <h3 style="margin-bottom: 10px; color: #c97f3e;">2. Documentación</h3>
+      <p>Solicitamos toda la evidencia necesaria para respaldar tu reclamación.</p>
     </div>
 
-    <div class="faq">
-      <button>¿Cómo sé si mi caso aplica para recuperación?</button>
-      <div class="faq-content"><p>Si fuiste víctima de fraude financiero, probablemente sí. Contáctanos y evaluamos tu caso gratis.</p></div>
+    <div style="background: linear-gradient(145deg, #fbe8d3, #ffd79a); padding: 25px; border-radius: 15px; width: 230px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <div style="font-size: 2.0em; margin-bottom: 12px;">⚖️</div>
+      <h3 style="margin-bottom: 10px; color: #c97f3e;">3. Acción legal</h3>
+      <p>Interponemos los procedimientos adecuados ante las autoridades competentes.</p>
     </div>
 
-    <div class="faq">
-      <button>¿Qué necesito para iniciar?</button>
-      <div class="faq-content"><p>Documentos, comprobantes y detalles del fraude. Nosotros te ayudamos a organizar todo.</p></div>
+    <div style="background: linear-gradient(145deg, #fbe8d3, #ffd79a); padding: 25px; border-radius: 15px; width: 230px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+         onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.15)';">
+      <div style="font-size: 2.0em; margin-bottom: 12px;">💰</div>
+      <h3 style="margin-bottom: 10px; color: #c97f3e;">4. Recuperación</h3>
+      <p>Te ayudamos a obtener el reembolso de manera segura y documentada.</p>
     </div>
 
-    <div class="faq">
-      <button>¿Cuáles son sus honorarios?</button>
-      <div class="faq-content"><p>Trabajamos bajo el esquema <strong>“solo pagas si recuperamos”</strong>. Sin costos ocultos.</p></div>
-    </div>
+  </div>
+</section>
 
-    <div class="faq">
-      <button>¿Es seguro compartir mi información?</button>
-      <div class="faq-content"><p>Absolutamente. Tus datos están protegidos por protocolos de confidencialidad.</p></div>
-    </div>
-  </section>
-  <!-- NUEVA SECCIÓN DE TESTIMONIOS -->
-  <section id="testimonios" class="testimonios">
-    <h2>Testimonios</h2>
-    <h3>"No solo recuperamos dinero, devolvemos paz mental."</h3>
+<section id="faq">
+  <h2 style="font-size: 2em; text-align: center; margin-bottom: 20px;">Preguntas frecuentes</h2>
 
+  <div class="faq">
+    <button style="font-size: 1.0em; padding: 10px 15px;">¿Realmente pueden recuperar mi dinero?</button>
+    <div class="faq-content">
+      <p style="font-size: 1.0em;">Sí. Contamos con un equipo legal y financiero especializado. Evaluamos tu caso sin costo para determinar su viabilidad.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button style="font-size: 1.0em; padding: 10px 15px;">¿Cómo sé si mi caso aplica para recuperación?</button>
+    <div class="faq-content">
+      <p style="font-size: 1.0em;">Si fuiste víctima de fraude financiero, probablemente sí. Contáctanos y evaluamos tu caso gratis.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button style="font-size: 1.0em; padding: 10px 15px;">¿Qué necesito para iniciar?</button>
+    <div class="faq-content">
+      <p style="font-size: 1.0em;">Documentos, comprobantes y detalles del fraude. Nosotros te ayudamos a organizar todo.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button style="font-size: 1.0em; padding: 10px 15px;">¿Cuáles son sus honorarios?</button>
+    <div class="faq-content">
+      <p style="font-size: 1.0em;">Trabajamos bajo el esquema <strong>“solo pagas si recuperamos”</strong>. Sin costos ocultos.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button style="font-size: 1.0em; padding: 10px 15px;">¿Es seguro compartir mi información?</button>
+    <div class="faq-content">
+      <p style="font-size: 1.0em;">Absolutamente. Tus datos están protegidos por protocolos de confidencialidad.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="testimonios">
+    <h2>Testimonios de nuestros clientes</h2>
     <div class="testimonios-grid">
       <div class="testimonio">
-        <p>✅ <strong>Ana G.</strong> — Recuperó $45,000 MXN tras estafa de préstamo fraudulento.</p>
-        <p>"Creí que había perdido todo mi ahorro. El equipo de Recuperación Total fue profesional y me guió paso a paso. En 3 semanas tenía mi dinero de vuelta. ¡Gracias!"</p>
+        <p>"Gracias a Recuperación Total recuperé mi dinero de un fraude de inversión. ¡Profesionales y confiables!"</p>
+        <strong>- Juan P.</strong>
       </div>
-
       <div class="testimonio">
-        <p>✅ <strong>Carlos R.</strong> — Recuperó $120,000 MXN por fraude con AFORE.</p>
-        <p>"Desconfiaba de todo después de la estafa, pero Recuperación Total me demostró que aún hay instituciones serias. Transparentes, eficientes y humanos."</p>
+        <p>"El proceso fue sencillo y rápido. Recomiendo totalmente este equipo a quienes han sufrido estafas." </p>
+        <strong>- María G.</strong>
       </div>
-
       <div class="testimonio">
-        <p>✅ <strong>María L.</strong> — Recuperó $28,000 MXN por compra fraudulenta en línea.</p>
-        <p>"Me sentí vulnerable y engañada. Recuperación Total luchó por mí cuando yo ya no podía. ¡No duden en contactarlos!"</p>
-      </div>
-
-      <div class="testimonio">
-        <p>✅ <strong>Javier M.</strong> — Recuperó $80,000 USD en estafa de criptomonedas.</p>
-        <p>"Pensé que era imposible recuperar dinero en cripto. Recuperación Total usó estrategias legales innovadoras y lo logró. ¡Increíble!"</p>
+        <p>"Su atención personalizada y transparencia me dieron confianza en un momento difícil." </p>
+        <strong>- Carlos L.</strong>
       </div>
     </div>
-
-    <h3 style="margin-top:40px;">¿Por qué nos eligen?</h3>
-    <ul style="text-align:left; max-width:700px; margin:20px auto;">
-      <li>🔹 <strong>Resultados reales:</strong> +$500,000,000 MXN recuperados en los últimos 2 años.</li>
-      <li>🔹 <strong>Confianza:</strong> 9 de cada 10 clientes nos recomiendan.</li>
-      <li>🔹 <strong>Experiencia:</strong> +10,200 casos resueltos con éxito.</li>
-    </ul>
   </section>
+
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>Puedes comunicarte con nosotros a través del formulario o directamente por WhatsApp. Un asesor te responderá en pocos minutos.</p>
-
-<!-- FORMULARIO DE CONTACTO -->
-<form id="contact-form" action="https://formspree.io/f/xqagbjdj" method="POST">
-  <input type="text" name="nombre" placeholder="Nombre completo" required />
-  <input type="email" name="email" placeholder="Correo electrónico" required />
-  <textarea name="mensaje" rows="5" placeholder="Cuéntanos brevemente tu caso" required></textarea>
-  <button type="submit">Enviar mensaje</button>
-
-  <!-- Aquí aparecerá el mensaje de éxito o error -->
-  <p id="form-status" style="display:none; color:green; font-weight:bold; margin-top:10px;">
-    ✅ Correo enviado con éxito.
-  </p>
-</form>
-   <!-- WHATSAPP -->
-  <div style="text-align:center; margin-top:25px;">
-   <a href="https://wa.me/5625205873?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20los%20servicios%20de%20Recuperación%20Total"
-       target="_blank" class="whatsapp">
-       💬 Contactar a Recuperación Total por WhatsApp
-    </a>
-  </div>
+    <p>Escríbenos y empieza tu recuperación hoy mismo.</p>
+    <form>
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea rows="4" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <a href="https://wa.me/521XXXXXXXXXX" class="whatsapp">WhatsApp</a>
   </section>
 
   <footer>
-    <p>© 2025 Recuperación Total — Todos los derechos reservados</p>
+    <p>© 2025 Recuperación Total. Todos los derechos reservados.</p>
   </footer>
 
   <script>
-    // Acordeones para FAQ
-    document.querySelectorAll('.faq button').forEach(btn => {
-      btn.addEventListener('click', () => {
+    // FAQ toggle
+    const faqButtons = document.querySelectorAll(".faq button");
+    faqButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
         const content = btn.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        content.style.display = content.style.display === "block" ? "none" : "block";
       });
     });
   </script>
-<script>
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // evita redirección
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        status.style.display = 'block';
-        status.style.color = 'green';
-        status.textContent = '✅ Correo enviado con éxito.';
-        form.reset();
-      } else {
-        throw new Error('Error al enviar');
-      }
-    } catch (error) {
-      status.style.display = 'block';
-      status.style.color = 'red';
-      status.textContent = '❌ Error al enviar. Intenta nuevamente.';
-    }
-  });
-</script>
 </body>
 </html>
-
